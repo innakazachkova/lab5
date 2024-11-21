@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <link rel ="stylesheet" href="table.css"/>
+    </head>
+    <body>
+    <head>
+        <div class = "header">
+        <a href="2.html">Основная страница</a>
+        <a href="3.html">Позиционирование элементов</a>
+        <a href="table.html">Таблица</a>
+    </div>
+    </head>
+    <table>
+        <caption>
+            Композиторы
+        </caption>
+        <thread>
+            <tr>
+                <th>;3</th>
+                <th>Имя</th>
+                <th>Фамилия</th>
+                <th>Год рождения</th>
+            </tr>
+
+            <tr>
+                <th>1</th>
+                <th>Иоганн</th>
+                <th>Бах</th>
+                <th>1685</th>
+            </tr>
+            
+            <tr>
+                <th>2</th>
+                <th>Людвиг</th>
+                <th>Бетховен</th>
+                <th>1770</th>
+            </tr>
+
+            <tr>
+                <th>3</th>
+                <th>Вольфганг</th>
+                <th>Моцарт</th>
+                <th>1756</th>
+            </tr>
+
+            <tr>
+                <th>4</th>
+                <th>Клод</th>
+                <th>Дебюсси</th>
+                <th>1862</th>
+            </tr>
+
+            <tr>
+                <th>5</th>
+                <th>Сергей</th>
+                <th>Прокофьев</th>
+                <th>1891</th>
+            </tr>
+        </thread>
+    </form>
+</table>
+<form id="paintersAdd">
+    <label for="num">Номер</label>
+    <input type="number" id="num" name="num" required><br>
+
+    <label for="name">Композитор:</label>
+    <input type="text" id="name" name="name" required><br>
+
+    <label for="surname">Фамилия</label>
+    <input type="text" id="surname" name="surname" required><br>
+
+    <label for="dateOfBirth">Год рождения</label>
+    <input type="number" id="dateOfBirth" name="dateOfBirth" required><br>
+    <button>Добавить</button>
+ <script>
+    const form = document.getElementById('paintersAdd');
+    const tableBody = document.querySelector('table');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const num = document.getElementById('num').value;
+        const name = document.getElementById('name').value;
+        const surname = document.getElementById('surname').value;
+        const dateOfBirth = document.getElementById('dateOfBirth').value;
+
+        const newRow = document.createElement('tr');
+        newRow.innerHTML = `
+            <td>${num}</td>
+            <td>${name}</td>
+            <td>${surname}</td>
+            <td>${dateOfBirth}</td>
+        `;
+        tableBody.appendChild(newRow);
+
+        form.reset();
+    });
+</script>
+    </table>
+</body>
+    <body>
+
+    </body>
+
+</html>

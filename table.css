@@ -1,0 +1,14 @@
+body
+{
+    background-color:rgb(181, 96, 205);
+}
+table,th,td
+{
+    border:1px solid rgb(95, 74, 95);
+    border-collapse: collapse;
+}
+
+th,td{
+    background-color: rgb(193, 145, 185);
+    text-align: center;
+}
